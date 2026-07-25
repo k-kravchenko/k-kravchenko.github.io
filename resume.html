@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Résumé — Kateryna Kravchenko</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="Résumé of Kateryna Kravchenko — Interaction & Experiential Designer, Vancouver BC.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://k-kravchenko.github.io/resume.html">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Résumé — Kateryna Kravchenko">
+<meta property="og:description" content="Résumé of Kateryna Kravchenko — Interaction &amp; Experiential Designer, Vancouver BC.">
+<meta property="og:url" content="https://k-kravchenko.github.io/resume.html">
+<meta property="og:image" content="https://k-kravchenko.github.io/img/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Résumé — Kateryna Kravchenko">
+<meta name="twitter:description" content="Résumé of Kateryna Kravchenko — Interaction &amp; Experiential Designer, Vancouver BC.">
+<meta name="twitter:image" content="https://k-kravchenko.github.io/img/og-cover.jpg">
+<meta name="theme-color" content="#F5F5F5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#1D1DFF;
+  --paper:#F5F5F5; --ink:#111110; --ink-2:#444440; --ink-3:#6E6E68;
+  --rule:#DCDCDC; --rule-dark:#111110;
+  --display:'Anton',Impact,sans-serif;
+  --mono:'Space Mono','Courier New',monospace;
+  --serif:'Source Serif 4',Georgia,serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:16px;line-height:1.6;margin:0;}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px;}
+a{color:inherit;}
+
+/* paper grain, consistent with the site */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.10;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:240px 240px;}
+.wrap,header,footer{position:relative;z-index:1;}
+
+/* nameplate + navplate (consistent with the case-study pages) */
+header{display:contents;}
+.rule{border:none;border-top:1px solid var(--rule);margin:0;}
+.nameplate{text-align:center;padding:16px 0 12px;}
+.nameplate a{display:inline-block;line-height:0;}
+.navplate{display:flex;justify-content:center;gap:32px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.5px;padding:8px 0;position:sticky;top:0;z-index:9500;background:var(--paper);border-bottom:3px solid var(--rule-dark);}
+.navplate a{color:var(--ink-2);text-decoration:none;}
+.navplate a:hover{color:var(--accent);}
+.navplate a[aria-current]{color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:4px;}
+@media(max-width:600px){.navplate{gap:16px;flex-wrap:wrap;}}
+
+/* résumé header */
+.rhead{padding:36px 0 22px;border-bottom:1px solid var(--rule);}
+.rhead .kicker{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--ink);margin:0 0 10px;}
+.rhead h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(40px,8vw,80px);line-height:1;letter-spacing:.5px;margin:0;}
+.rhead .role{font-family:var(--serif);font-weight:300;font-size:clamp(20px,2.4vw,26px);color:var(--ink-2);margin:12px 0 18px;}
+.rhead .contact{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:6px 14px;}
+.rhead .contact a{color:var(--ink-2);text-decoration:none;}
+.rhead .contact a:hover{color:var(--accent);}
+.rhead .sep{color:var(--rule);}
+
+.summary{font-family:var(--serif);font-weight:300;font-size:clamp(18px,2vw,21px);color:var(--ink-2);max-width:70ch;margin:22px 0 8px;}
+
+/* entrance: subtle staggered fade-up (print & reduced-motion safe) */
+@keyframes rIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+.rhead{animation:rIn .55s cubic-bezier(.16,1,.3,1) both;}
+.summary{animation:rIn .55s cubic-bezier(.16,1,.3,1) .08s both;}
+.actions{animation:rIn .55s cubic-bezier(.16,1,.3,1) .14s both;}
+.rbody .main{animation:rIn .6s cubic-bezier(.16,1,.3,1) .2s both;}
+.rbody .rail{animation:rIn .6s cubic-bezier(.16,1,.3,1) .3s both;}
+@media(prefers-reduced-motion:reduce){.rhead,.summary,.actions,.rbody .main,.rbody .rail{animation:none;}}
+
+/* layout: main experience + side rail */
+.rbody{display:grid;grid-template-columns:1fr 300px;gap:48px;padding:28px 0 40px;align-items:start;}
+@media(max-width:820px){.rbody{grid-template-columns:1fr;gap:32px;}}
+
+h2.sh{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ink);border-bottom:3px solid var(--rule-dark);padding-bottom:8px;margin:0 0 18px;}
+
+.job{margin-bottom:22px;}
+.job:last-child{margin-bottom:0;}
+.job .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;}
+.job h3{font-family:var(--serif);font-weight:600;font-size:18px;margin:0;line-height:1.25;}
+.job h3 .org{color:var(--ink);}
+.job .date{font-family:var(--mono);font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;}
+.job ul{margin:8px 0 0;padding-left:18px;}
+.job li{color:var(--ink-2);margin-bottom:5px;}
+.job li::marker{color:var(--accent);}
+
+.rail section{margin-bottom:26px;}
+.rail section:last-child{margin-bottom:0;}
+.rail h2.sh{margin-bottom:12px;}
+.rail .grp{margin-bottom:12px;}
+.rail .grp:last-child{margin-bottom:0;}
+.rail .lab{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:2px;}
+.rail p{font-size:14px;color:var(--ink-2);margin:0;line-height:1.5;}
+.rail .edu{margin-bottom:12px;}
+.rail .edu:last-child{margin-bottom:0;}
+.rail .edu b{font-weight:600;color:var(--ink);font-size:14px;}
+.rail .edu span{display:block;font-family:var(--mono);font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.5px;margin-top:1px;}
+
+/* download / print */
+.actions{padding:0 0 6px;}
+.btn{display:inline-block;font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;text-decoration:none;color:#fff;background:var(--accent);border:2px solid var(--accent);padding:9px 18px;cursor:pointer;transition:background .2s,color .2s;}
+.btn:hover{background:var(--ink);border-color:var(--ink);}
+
+footer{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-3);border-top:1px solid var(--rule);padding:20px 0 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+footer a{color:var(--ink-3);text-decoration:none;}
+
+/* ---------- print: clean one-page PDF ---------- */
+@media print{
+  @page{margin:14mm;}
+  body{background:#fff;font-size:10.5pt;}
+  body::before{display:none;}
+  .rhead,.summary,.actions,.rbody .main,.rbody .rail{animation:none!important;opacity:1!important;transform:none!important;}
+  .wrap{max-width:none;padding:0;}
+  .nameplate,.navplate,.rule,.actions,footer{display:none!important;}
+  .rhead{padding:0 0 10px;border-color:#000;}
+  .rhead h1{font-size:30pt;}
+  .rhead .role{font-size:13pt;margin:4px 0 8px;}
+  .rhead .contact{font-size:8.5pt;color:#333;}
+  .summary{font-size:10.5pt;margin:10px 0;color:#222;}
+  .rbody{grid-template-columns:1fr 240px;gap:26px;padding:10px 0 0;}
+  h2.sh{border-color:#000;color:#000;margin-bottom:10px;padding-bottom:5px;}
+  .job{margin-bottom:12px;break-inside:avoid;}
+  .job h3{font-size:11pt;}
+  .job .date,.rail .lab,.rail .edu span{color:#333;}
+  .job li{color:#222;margin-bottom:3px;}
+  .rail p,.rail .edu b{color:#222;}
+  a{color:#000;text-decoration:none;}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" aria-hidden="true" style="position:absolute"><symbol id="kmark" viewBox="0 0 110 111"><path d="M86.532 88.1449V68.9378H109.606V88.1449H86.532Z" fill="#1D1DFF"/><path d="M42.504 2.67781C35.772 17.8578 33 19.8378 18.084 15.7458H16.104C9.9 14.4258 4.224 13.2378 0 19.8378C0.132 13.2378 2.244 6.76981 8.58 2.67781C15.048 -1.94219 20.856 0.301817 27.984 2.80982L32.076 4.12982C36.828 5.58181 39.072 4.92181 42.504 2.67781ZM53.592 47.5578L76.032 3.46982C77.22 1.22581 76.56 2.01781 77.484 1.75381C79.068 3.60181 79.596 5.18582 81.972 5.97781C85.8 7.29781 88.308 5.31782 91.608 2.14982C91.344 6.76981 88.968 14.9538 83.82 19.1778C78.804 23.2698 74.58 22.2138 69.696 20.6298C69.168 21.1578 68.772 22.0818 68.376 22.7418L58.08 43.3338C66.132 51.5178 67.716 56.4018 70.092 63.5298L74.844 77.9178C76.032 81.3498 78.936 91.2498 83.952 93.6258C86.592 94.9458 89.364 93.6258 92.4 92.1738C87.648 97.8498 83.028 105.374 80.124 110.786C77.088 110.39 78.276 111.05 75.372 109.73C67.716 106.43 66 97.8498 63.888 91.5138L57.948 71.1858C55.968 65.1138 55.44 62.8698 51.216 57.5898L50.424 59.4378C47.916 76.4658 48.972 77.9178 32.868 83.4618C36.168 78.9738 37.224 76.4658 37.356 71.3178V32.7738C37.356 19.4418 38.94 11.5218 55.044 4.65782C51.744 11.3898 50.688 16.2738 50.688 23.0058V52.4418L53.592 47.5578ZM33.264 22.0818C30.888 26.5698 30.756 26.8338 30.36 33.6978V67.7538C29.964 77.3898 30.624 83.5938 17.292 90.0618C16.5 90.3258 13.464 91.6458 12.936 91.3818C16.764 84.1218 16.236 78.0498 16.104 71.1858V63.0018L14.52 61.8138C12.408 61.8138 10.824 61.6818 9.504 62.2098C6.204 63.5298 7.26 63.6618 6.336 66.3018C5.808 66.0378 4.356 64.5858 3.96 63.7938C3.828 63.3978 3.432 62.6058 3.168 60.8898C2.904 59.0418 3.036 56.7978 3.696 54.9498C4.62 51.6498 6.6 48.6138 10.56 47.4258C12.54 46.7658 13.332 47.1618 15.312 47.1618L16.104 46.3698C16.236 38.3178 16.104 30.0018 26.268 24.1938C27.456 23.6658 28.908 23.0058 33.264 22.0818ZM60.456 93.8898V95.0778C55.572 100.226 54.516 101.414 49.5 107.882L47.52 110.258C34.848 101.018 17.82 102.338 5.148 108.542C13.2 94.9458 27.72 89.1378 37.884 88.8738C41.976 88.7418 47.652 90.1938 49.236 90.7218C50.688 91.2498 52.14 91.9098 54.912 93.6258C56.1 94.2858 56.496 95.4738 57.684 95.6058C58.344 95.3418 58.476 95.3418 59.004 94.9458L59.664 94.1538L60.456 93.8898Z" fill="#111110"/></symbol></svg>
+
+<div class="wrap">
+  <header>
+    <div class="nameplate"><a href="index.html" aria-label="Kateryna Kravchenko — home"><svg width="34" height="34" aria-hidden="true"><use href="#kmark"/></svg></a></div>
+    <hr class="rule">
+    <nav class="navplate" aria-label="Main">
+      <a href="index.html">Home</a><a href="index.html#work">Work</a><a href="about.html">About</a><a href="index.html#contact">Contact</a><a href="resume.html" aria-current="page">Résumé</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="rhead">
+      <p class="kicker">Résumé</p>
+      <h1>Kateryna Kravchenko</h1>
+      <p class="role">Interaction &amp; Experiential Designer</p>
+      <div class="contact">
+        <a href="mailto:kkravchenko.y@gmail.com">kkravchenko.y@gmail.com</a><span class="sep">/</span>
+        <span>Vancouver, BC</span><span class="sep">/</span>
+        <a href="https://www.linkedin.com/in/kravchenko-kateryna/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">/</span>
+        <a href="https://github.com/k-kravchenko" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <p class="summary">Nine years writing for Ukrainian television, now designing experiences people walk through. Screenwriting taught me to earn attention and cut what doesn&rsquo;t serve the story, the same instinct I bring to interaction and visual design, from research to production code.</p>
+
+    <div class="actions">
+      <button class="btn" id="printbtn" type="button">Download / print PDF ↓</button>
+    </div>
+
+    <div class="rbody">
+      <div class="main">
+        <h2 class="sh">Professional experience</h2>
+
+        <div class="job">
+          <div class="top"><h3><span class="org">NGX Interactive</span>, Interactive Designer Intern</h3><span class="date">Feb – Apr 2026</span></div>
+          <ul>
+            <li>Designed interactive UI concepts for large-scale exhibition experiences, including mobile AR interfaces, projection screens and game-based interactions, building polished solutions from established user flows and visual direction.</li>
+            <li>Produced wireframes and interactive design samples for client projects, accelerating internal iterations and supporting client presentations.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="top"><h3><span class="org">FLUI Design Jam</span>, UI Designer</h3><span class="date">Jul 2025 – Feb 2026</span></div>
+          <ul>
+            <li>Designed a custom brand typeface adopted across the website, digital products and brand merchandise.</li>
+            <li>Shipped a responsive Event Detail page using consistent, accessible components, contributing to a more scalable event experience.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="top"><h3><span class="org">Defend</span>, UX/UI Designer</h3><span class="date">Dec 2023 – Sep 2024</span></div>
+          <ul>
+            <li>Designed and developed the UX/UI for a child-safety mobile app, improving engagement and ensuring consistency across the platform.</li>
+            <li>Created user-flow charts and a scalable design system for smooth integration and an intuitive experience.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="top"><h3><span class="org">Ukrainian Psychological Hub</span>, UX/UI Designer &amp; Low-Code Developer</h3><span class="date">Feb – Sep 2024</span></div>
+          <ul>
+            <li>Led the website redesign, increasing user engagement by 39%.</li>
+            <li>Implemented the new design independently on Wix, writing custom CSS/JS to extend functionality and interactivity.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="top"><h3><span class="org">Shovkovo</span>, UX/UI Designer &amp; Low-Code Developer</h3><span class="date">May – Oct 2023</span></div>
+          <ul>
+            <li>Designed and developed an e-commerce site that increased product sales by 25%.</li>
+            <li>Conducted UX research, including personas and journey maps, to address user pain points.</li>
+            <li>Delivered high-quality wireframes and prototypes to streamline the design process.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="top"><h3><span class="org">Inter · STB · ICTV · Hromadske Radio</span>, Screenwriter &amp; Journalist</h3><span class="date">2013 – 2022</span></div>
+          <ul>
+            <li>Screenwriter of a national culinary show: researched stories, wrote scripts, guided the host through recordings and shaped the episodes in the edit.</li>
+            <li>Nearly a decade across national television and radio, from a live political talk show to reporting and writing, all to broadcast deadlines.</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="rail">
+        <section>
+          <h2 class="sh">Skills</h2>
+          <div class="grp"><span class="lab">Design</span><p>User-Centered Design, Interaction Design, Information Architecture, Wireframing &amp; Prototyping, Design Systems, Accessibility</p></div>
+          <div class="grp"><span class="lab">Research &amp; testing</span><p>UX Research, A/B Testing, Usability Testing, Competitive Audits</p></div>
+          <div class="grp"><span class="lab">Development</span><p>HTML, CSS, PHP, JavaScript, Web Development</p></div>
+          <div class="grp"><span class="lab">Methodologies</span><p>Design Thinking, Agile / Scrum</p></div>
+        </section>
+
+        <section>
+          <h2 class="sh">Tools</h2>
+          <div class="grp"><span class="lab">Design</span><p>Figma, Adobe Creative Suite, Webflow, WordPress, Wix</p></div>
+          <div class="grp"><span class="lab">Research &amp; analytics</span><p>Hotjar, Mixpanel, UserTesting, Maze</p></div>
+          <div class="grp"><span class="lab">Collaboration</span><p>Jira, Slack, AI-assisted workflows</p></div>
+        </section>
+
+        <section>
+          <h2 class="sh">Education</h2>
+          <div class="edu"><b>Capilano University</b><span>Interaction Design · Jun 2026</span></div>
+          <div class="edu"><b>Google UX Design</b><span>Certificate · Sep 2022</span></div>
+          <div class="edu"><b>Taras Shevchenko National University of Kyiv</b><span>MA, Journalism · Jun 2016</span></div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <span>© 2026 Kateryna Kravchenko</span>
+    <a href="mailto:kkravchenko.y@gmail.com">kkravchenko.y@gmail.com</a>
+  </footer>
+</div>
+
+<script>
+document.getElementById('printbtn').addEventListener('click',function(){window.print();});
+</script>
+</body>
+</html>
