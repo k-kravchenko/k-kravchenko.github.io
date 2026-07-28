@@ -87,6 +87,28 @@ html.gated body > *:not(#gate){display:none !important;}
   letter-spacing:1px;color:var(--ink-2);text-decoration:none;}
 #gate .gateback a:hover{color:var(--accent);}
 
+
+/* ---------- screen map ---------- */
+.screenmap{margin:20px 0 6px;}
+.screenmap .legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;margin:0 0 14px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--ink-3);}
+.screenmap .k{width:22px;height:0;border-top:3px solid var(--accent);display:inline-block;margin-right:-8px;}
+.screenmap .k-a{border-top-style:dotted;border-color:var(--ink-3);}
+.screenmap ol{list-style:none;margin:0;padding:0;display:grid;gap:0 20px;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));}
+.screenmap li{position:relative;padding:12px 0 16px;border-top:3px solid var(--accent);}
+.screenmap li.adapted{border-top:3px dotted var(--ink-3);}
+.screenmap .n{display:block;font-family:var(--display);font-weight:400;font-size:26px;line-height:1;
+  color:var(--accent);margin-bottom:6px;}
+.screenmap li.adapted .n{color:var(--ink-3);}
+.screenmap b{display:block;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--ink);
+  line-height:1.25;margin-bottom:4px;}
+.screenmap .d{display:block;font-family:var(--serif);font-weight:300;font-size:14px;line-height:1.45;
+  color:var(--ink-2);}
+.screenmap .pri{display:inline-block;margin:8px 0 0;font-family:var(--mono);font-size:10px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--accent);}
+@media(max-width:560px){.screenmap ol{grid-template-columns:1fr;gap:0;}}
+
 /* ---------- case hero ---------- */
 .chero{padding:40px 0 8px;}
 .crumb{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-3);margin-bottom:32px;}
@@ -128,7 +150,6 @@ article p strong{color:var(--ink);}
 .heroimg{width:100%;height:auto;display:block;border:none;}
 .chero .heroimg{width:100%;height:auto;aspect-ratio:1600/639;object-fit:cover;object-position:center;}
 .figimg{width:100%;height:auto;display:block;border:none;}
-article .figimg.uipair{max-width:560px;}
 /* before/after comparison slider */
 .ba-row{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:20px;margin-top:32px;}
 .ba-row .beforeafter{margin:0;}
@@ -160,6 +181,8 @@ article section > .scrollfig{margin-top:32px;}
 .pull{border-left:4px solid var(--accent);padding:8px 0 8px 20px;font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.5;color:var(--ink);max-width:560px;margin:24px 0;}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0 6px;}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px 0 6px;}
+.grid3.phones{max-width:660px;gap:14px;align-items:start;}
+@media(max-width:560px){.grid3.phones{grid-template-columns:repeat(3,1fr);gap:8px;}}
 .mid{min-height:200px;}
 .tall{min-height:320px;}
 .list{list-style:none;margin:16px 0 16px;max-width:640px;}
@@ -306,11 +329,11 @@ body::before{background-size:240px 240px;}
     <p class="crumb"><a href="index.html">Home</a> / <a href="index.html#work">Selected work</a> / <span aria-current="page">Oakridge Park AR</span></p>
     <div class="tags"><span class="yr">2026 · Shipped</span><span>Mobile AR</span><span>Exhibition</span><span>NGX Interactive</span></div>
     <h1>Kio, an AR bird <span class="accent ink">for a public park</span></h1>
-    <p class="standfirst">Kio&rsquo;s Wall is an AR art installation at Oakridge Park. Visitors fold an origami hummingbird, then bring it to life through AR on their phones. I designed the on-screen experience during my practicum at NGX Interactive.</p>
+    <p class="standfirst">Kio&rsquo;s Wall is an AR installation at Oakridge Park. Visitors fold an origami hummingbird, then bring it to life through AR on their phones. I designed the on-screen experience during my practicum at <a href="https://ngxinteractive.com/" target="_blank" rel="noopener">NGX Interactive</a>.</p>
 
     <div class="factsrow" aria-label="Project facts">
       <div><small>Role</small><span>UI / Interaction design</span></div>
-      <div><small>Team</small><span>NGX Interactive</span></div>
+      <div><small>Team</small><span><a href="https://ngxinteractive.com/" target="_blank" rel="noopener">NGX Interactive</a></span></div>
       <div><small>Timeline</small><span>Feb – Apr 2026</span></div>
       <div><small>Status</small><span>Live at Oakridge Park</span></div>
     </div>
@@ -339,20 +362,30 @@ body::before{background-size:240px 240px;}
       <section id="overview" class="rv">
         <h2 class="sh"><span class="num">01</span>Overview</h2>
         <p><strong>Kio&rsquo;s Wall is an immersive augmented-reality art installation</strong> at Oakridge Park in Vancouver, part of Canada&rsquo;s largest redevelopment project. It merges physical design, tactile origami and AR: visitors fold an origami hummingbird, then bring their new avian friend to life through AR on their phones, posing with Kio beneath the installation arch or turning the camera around for a selfie.</p>
-        <p>I designed the on-screen AR experience during my practicum at NGX Interactive, working under the supervision of Natalie Heaman.</p>
+        <p>I worked with the design team at NGX Interactive on the AR app UI during my practicum, mentored by the project designer.</p>
       </section>
 
       <section id="challenge" class="rv">
         <h2 class="sh"><span class="num">02</span>The brief</h2>
         <p>I joined Kio&rsquo;s Wall partway through. The concept, the user flow and UI screens from earlier client deliverables were already in place. My job was to design the on-screen experience to fit three things: the existing user flow, Oakridge&rsquo;s brand style guide, and the art direction the team had chosen.</p>
         <p>The setting set real constraints. The screens had to read in bright daylight, work for visitors of any age, and guide people who had never used AR, from folding a paper hummingbird to watching it come to life on the camera.</p>
-<img class="figimg uipair" src="img/oakridge-ui-screens.png" alt="UI screens from earlier client deliverables" width="1814" height="1624" loading="lazy">        <p class="cap">UI screens from earlier deliverables.</p>
-<img class="figimg" src="img/oakridge-userflow.png" alt="The schematic user flow mapping the screens still to be designed" width="5160" height="2232" loading="lazy">        <p class="cap">The user flow: a scheme for the screens still to be designed.</p>
+        <p><strong>Two screens already existed</strong> from earlier client deliverables. I designed six, four of them prioritised for launch.</p>
+        <div class="screenmap">
+          <p class="legend"><span class="k k-a"></span>Adapted from existing designs<span class="k k-n"></span>Designed from scratch</p>
+          <ol>
+            <li class="adapted"><span class="n">01</span><b>Landing</b><span class="d">Hold the QR code in frame to trigger the bird</span><span class="pri">Priority</span></li>
+            <li class="adapted"><span class="n">02</span><b>Details overlay</b><span class="d">Enter a name and email address</span><span class="pri">Priority</span></li>
+            <li><span class="n">03</span><b>Confirmed</b><span class="d">Details shared successfully</span><span class="pri">Priority</span></li>
+            <li><span class="n">04</span><b>Decline path</b><span class="d">Back to camera, with a prompt to reopen the overlay later</span></li>
+            <li><span class="n">05</span><b>Photo mode</b><span class="d">Oakridge logo and tagline framing the shot</span><span class="pri">Priority</span></li>
+            <li><span class="n">06</span><b>End state</b><span class="d">Camera open, thank-you notice in the corner</span></li>
+          </ol>
+        </div>
       </section>
 
       <section id="role" class="rv">
         <h2 class="sh"><span class="num">03</span>My role</h2>
-        <p>Honestly scoped: I was one designer inside the NGX team, designing from an established flow and art direction under Natalie Heaman&rsquo;s supervision.</p>
+        <p>Honestly scoped: I was one designer inside the NGX team, designing from an established flow and art direction, mentored by the project designer.</p>
         <ul class="list">
           <li>Designed the AR interface screens, from the existing flow to polished UI</li>
           <li>Explored visual directions and iterated on the one that fit the art direction</li>
@@ -364,18 +397,21 @@ body::before{background-size:240px 240px;}
       <section id="process" class="rv">
         <h2 class="sh"><span class="num">04</span>Process</h2>
         <p>Before designing anything, I studied the user flow and learned Oakridge&rsquo;s brand style guide. From there I explored several directions, playing with the brand&rsquo;s shapes, colours and line-work.</p>
-        <p>With Natalie, we narrowed it to two concepts:</p>
-<img class="figimg" src="img/oakridge-concept-light.png" alt="A light, simple design concept" loading="lazy">        <p class="cap">Concept one: light and simple.</p>
-<img class="figimg" src="img/oakridge-concept-dark.png" alt="A dark-green design concept with bolder shapes" loading="lazy">        <p class="cap">Concept two: dark green, with bolder shapes. This is the one we took forward.</p>
-        <p>Team feedback on March 9 sharpened the dark-green direction: make the green background shape smoother and more flowing, and use the same shape throughout; keep the golden line-work from overlapping; and move the logo-and-tagline shape to the bottom.</p>
-<div class="ba-row"><div class="beforeafter" style="--ba:50%;" role="slider" tabindex="0" aria-label="Drag to compare a third screen before and after the March 9 feedback" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><img class="ba-base" src="img/oakridge-after-feedback-3.jpg" alt="A third screen after the feedback" loading="lazy"><img class="ba-before" src="img/oakridge-before-feedback-3.png" alt="The same third screen before the feedback" loading="lazy"><div class="ba-divider" aria-hidden="true"><span class="ba-grip"></span></div><span class="ba-tag ba-tag-before" aria-hidden="true">Before</span><span class="ba-tag ba-tag-after" aria-hidden="true">After</span></div><div class="beforeafter" style="--ba:50%;" role="slider" tabindex="0" aria-label="Drag to compare the screen before and after the March 9 feedback" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><img class="ba-base" src="img/oakridge-after-feedback.jpg" alt="The screen after the feedback" width="786" height="1704" loading="lazy"><img class="ba-before" src="img/oakridge-before-feedback.jpg" alt="The same screen before the feedback" width="786" height="1704" loading="lazy"><div class="ba-divider" aria-hidden="true"><span class="ba-grip"></span></div><span class="ba-tag ba-tag-before" aria-hidden="true">Before</span><span class="ba-tag ba-tag-after" aria-hidden="true">After</span></div><div class="beforeafter" style="--ba:50%;" role="slider" tabindex="0" aria-label="Drag to compare a second screen before and after the March 9 feedback" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><img class="ba-base" src="img/oakridge-after-feedback-2.jpg" alt="A second screen after the feedback" loading="lazy"><img class="ba-before" src="img/oakridge-before-feedback-2.jpg" alt="The same second screen before the feedback" loading="lazy"><div class="ba-divider" aria-hidden="true"><span class="ba-grip"></span></div><span class="ba-tag ba-tag-before" aria-hidden="true">Before</span><span class="ba-tag ba-tag-after" aria-hidden="true">After</span></div></div>        <p class="cap">Drag each handle to compare a screen before and after the feedback: a smoother, consistent background shape, tidier gold line-work, and the logo moved to the bottom.</p>
+        <p>We narrowed it to two: a lighter, simpler treatment, and a darker one with bolder shapes. The dark-green direction went forward. Through review the rigid geometry softened into flowing forms, and that shape language carried through every screen.</p>
+        <div class="grid3 phones">
+          <img class="figimg" src="img/oakridge-delivered-align.jpg" alt="The screen instructing visitors to hold the QR code in frame" width="600" height="1301" loading="lazy">
+          <img class="figimg" src="img/oakridge-delivered-form.jpg" alt="The overlay for entering a name and email address" width="600" height="1301" loading="lazy">
+          <img class="figimg" src="img/oakridge-delivered-ar.jpg" alt="Photo mode, with the hummingbird framed over the camera view" width="600" height="1301" loading="lazy">
+        </div>
+        <p class="cap">Three of the six screens I delivered: aligning the QR code, entering details, and photo mode.</p>
       </section>
 
       <section id="solution" class="rv">
         <h2 class="sh"><span class="num">05</span>Final design</h2>
         <p>The final screens keep the experience simple and legible outdoors: align the QR code to summon Kio, add a name and email to continue, then watch the hummingbird come to life over the camera, with photo modes to pose with Kio.</p>
-<img class="figimg" src="img/oakridge-final.png" alt="The final AR screens: align the QR code, capture details, and the hummingbird brought to life in the camera" loading="lazy">        <p class="cap">The final screens: align, capture, and Kio brought to life in the camera.</p>
-        <p>Natalie Heaman took the design through its final touches before launch.</p>
+<img class="figimg" src="img/oakridge-launched-1.png" alt="The live experience: loading, aligning the QR code, scanning the origami station, and entering details" loading="lazy">
+<img class="figimg" src="img/oakridge-launched-2.png" alt="Kio in augmented reality over the concourse, the selfie mode, and the shareable image" loading="lazy"><p class="cap">Captured from the live experience at Oakridge Park: align, capture, and Kio brought to life in the camera.</p>
+        <p>The project designer took the design through its final touches before launch.</p>
       </section>
 
       <section id="outcome" class="rv">
@@ -386,13 +422,12 @@ body::before{background-size:240px 240px;}
           <div><span class="big">Practicum</span><small>Designed during my NGX term</small></div>
         </div>
         <p>Kio&rsquo;s Wall opened at Oakridge Park, part of Canada&rsquo;s largest redevelopment project. It was my first shipped work in public-space and exhibition design, and the project that confirmed where my two careers meet.</p>
-<img class="figimg" src="img/oakridge-launched-1.png" alt="Kio's Wall on location at Oakridge Park after launch" loading="lazy"><img class="figimg" src="img/oakridge-launched-2.png" alt="Visitors experiencing Kio's Wall at Oakridge Park" loading="lazy">        <p class="cap">Kio&rsquo;s Wall on location at Oakridge Park, after launch.</p>
       </section>
 
       <section id="reflection" class="rv">
         <h2 class="sh"><span class="num">07</span>Reflection</h2>
         <ul class="takeaways">
-          <li><strong>Trust the flow:</strong> when I started designing the surrounding screens, I overthought them. Natalie&rsquo;s guidance brought me back to the existing user flow as the anchor, and the work fell into place. A good flow is a map; my job was to design within it, not redraw it.</li>
+          <li><strong>Trust the flow:</strong> when I started designing the surrounding screens, I overthought them. My mentor&rsquo;s guidance brought me back to the existing user flow as the anchor, and the work fell into place. A good flow is a map; my job was to design within it, not redraw it.</li>
           <li><strong>Ask early:</strong> seeking feedback early and iterating on it kept the design aligned with the art direction and moving at practicum pace.</li>
           <li><strong>Where my careers meet:</strong> designing a story people walk through, in public space, is the work I want more of.</li>
         </ul>
