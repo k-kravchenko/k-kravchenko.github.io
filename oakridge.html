@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kio — Oakridge Park AR — Case Study — Kateryna Kravchenko</title>
-<script>document.documentElement.classList.add("gated");</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="description" content="Case study: mobile AR interface design for Oakridge Park, Vancouver, with NGX Interactive. Shipped 2026.">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://k-kravchenko.github.io/oakridge.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kio — Oakridge Park AR — Case Study — Kateryna Kravchenko">
@@ -59,55 +58,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 .topbar nav a{color:var(--ink-2);text-decoration:none;}
 .topbar nav a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px;}
 
-
-/* ---------- review gate ---------- */
-html.gated{overflow:hidden;}
-html.gated body > *:not(#gate){display:none !important;}
-#gate{position:fixed;inset:0;z-index:99999;background:var(--paper);display:flex;
-  align-items:center;justify-content:center;padding:24px;}
-#gate .box{width:100%;max-width:360px;text-align:left;}
-#gate .lbl{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.32em;
-  text-transform:uppercase;color:var(--ink);margin:0 0 12px;}
-#gate h2{font-family:var(--display);font-weight:400;text-transform:uppercase;
-  font-size:clamp(28px,4vw,44px);line-height:1;margin:0 0 12px;}
-#gate p{font-family:var(--serif);font-weight:300;font-size:16px;color:var(--ink-2);
-  margin:0 0 22px;line-height:1.5;}
-#gate form{display:flex;gap:8px;}
-#gate input{flex:1;min-width:0;font-family:var(--mono);font-size:13px;padding:12px 14px;
-  border:2px solid var(--ink);background:transparent;color:var(--ink);}
-#gate input:focus{outline:2px solid var(--accent);outline-offset:2px;}
-#gate button{font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;
-  letter-spacing:1px;color:#fff;background:var(--accent);border:2px solid var(--accent);
-  padding:12px 18px;cursor:pointer;}
-#gate button:hover{background:var(--ink);border-color:var(--ink);}
-#gate .err{font-family:var(--mono);font-size:12px;color:var(--accent);margin-top:12px;
-  min-height:1em;}
-#gate .gateback{margin:18px 0 0;border-top:1px solid var(--rule);padding-top:16px;}
-#gate .gateback a{font-family:var(--mono);font-size:12px;font-weight:700;text-transform:uppercase;
-  letter-spacing:1px;color:var(--ink-2);text-decoration:none;}
-#gate .gateback a:hover{color:var(--accent);}
-
-
-/* ---------- screen map ---------- */
-.screenmap{margin:20px 0 6px;}
-.screenmap .legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;margin:0 0 14px;
-  font-family:var(--mono);font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--ink-3);}
-.screenmap .k{width:22px;height:0;border-top:3px solid var(--accent);display:inline-block;margin-right:-8px;}
-.screenmap .k-a{border-top-style:dotted;border-color:var(--ink-3);}
-.screenmap ol{list-style:none;margin:0;padding:0;display:grid;gap:0 20px;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));}
-.screenmap li{position:relative;padding:12px 0 16px;border-top:3px solid var(--accent);}
-.screenmap li.adapted{border-top:3px dotted var(--ink-3);}
-.screenmap .n{display:block;font-family:var(--display);font-weight:400;font-size:26px;line-height:1;
-  color:var(--accent);margin-bottom:6px;}
-.screenmap li.adapted .n{color:var(--ink-3);}
-.screenmap b{display:block;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--ink);
-  line-height:1.25;margin-bottom:4px;}
-.screenmap .d{display:block;font-family:var(--serif);font-weight:300;font-size:14px;line-height:1.45;
-  color:var(--ink-2);}
-.screenmap .pri{display:inline-block;margin:8px 0 0;font-family:var(--mono);font-size:10px;font-weight:700;
-  letter-spacing:.08em;text-transform:uppercase;color:var(--accent);}
-@media(max-width:560px){.screenmap ol{grid-template-columns:1fr;gap:0;}}
 
 /* ---------- case hero ---------- */
 .chero{padding:40px 0 8px;}
@@ -281,19 +231,6 @@ body::before{background-size:240px 240px;}
 </style>
 </head>
 <body>
-<div id="gate">
-  <div class="box">
-    <p class="lbl">Under review</p>
-    <h2>Kio &mdash; Oakridge Park</h2>
-    <p>This case study is with NGX Interactive for review. Enter the password to view it.</p>
-    <form id="gateform" autocomplete="off">
-      <input id="gatepw" type="password" placeholder="Password" aria-label="Password" autofocus>
-      <button type="submit">Enter</button>
-    </form>
-    <p class="err" id="gateerr" role="status"></p>
-    <p class="gateback"><a href="index.html">&larr; Back to portfolio</a></p>
-  </div>
-</div>
 
 <div class="progress" aria-hidden="true"><span id="pbar"></span></div>
 <a class="skip" href="#overview">Skip to content</a>
@@ -612,30 +549,6 @@ if('IntersectionObserver' in window){
     ba.addEventListener("keydown",function(e){if(e.key==="ArrowLeft"){set(val-4);e.preventDefault();}else if(e.key==="ArrowRight"){set(val+4);e.preventDefault();}});
     set(50);
   });
-})();
-</script>
-<script>
-(function(){
-  var HASH='94561a781b06495abdad9bfa52ed40a002b694d823ae3e283253ee08daffcb73';
-  var KEY='kio-review-unlocked';
-  var root=document.documentElement;
-  function unlock(){root.classList.remove('gated');var g=document.getElementById('gate');if(g)g.remove();}
-  async function sha(t){
-    var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));
-    return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0');}).join('');
-  }
-  function init(){
-    try{ if(sessionStorage.getItem(KEY)==='1'){unlock();return;} }catch(e){}
-    var f=document.getElementById('gateform'),i=document.getElementById('gatepw'),e=document.getElementById('gateerr');
-    if(!f)return;
-    f.addEventListener('submit',async function(ev){
-      ev.preventDefault();
-      var h=await sha(i.value.trim());
-      if(h===HASH){ try{sessionStorage.setItem(KEY,'1');}catch(err){} unlock(); }
-      else { e.textContent='Not quite. Try again.'; i.value=''; i.focus(); }
-    });
-  }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
 </body>
